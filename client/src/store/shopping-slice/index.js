@@ -18,7 +18,7 @@ export const  getAllFilteredProducts = createAsyncThunk(
         })
 
         const result = await axios.get(
-            `${import.meta.env.SERVER_URL}/api/shopping/products/get/?${query}`,
+            `${import.meta.env.VITE_SERVER_URL}/api/shopping/products/get/?${query}`,
             {
                 withCredentials:true
             }
@@ -33,7 +33,7 @@ export const getProductDetails = createAsyncThunk(
     async ({productId}) =>  {
         // console.log(productId)
         const result = await axios.get(
-            `${import.meta.env.SERVER_URL}/api/shopping/products/${productId}`
+            `${import.meta.env.VITE_SERVER_URL}/api/shopping/products/${productId}`
 
         )
         

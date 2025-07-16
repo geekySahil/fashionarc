@@ -12,7 +12,7 @@ const initialState = {
 export const getAllAdminOrders = createAsyncThunk(
     'admin/getAllAdminOrders',
     async() => {
-        const result = await axios.get(`${import.meta.env.SERVER_URL}/api/admin/orders/get`)
+        const result = await axios.get(`${import.meta.env.VITE_SERVER_URL}/api/admin/orders/get`)
 
         return result?.data
     }
@@ -21,7 +21,7 @@ export const getAllAdminOrders = createAsyncThunk(
 export const getAdminOrderDetails = createAsyncThunk(
     'admin/getAdminOrderDetails',
     async(orderId) => {
-        const result = await axios.get(`${import.meta.env.SERVER_URL}/api/shopping/order/details/${orderId}`)
+        const result = await axios.get(`${import.meta.env.VITE_SERVER_URL}/api/shopping/order/details/${orderId}`)
 
         return result?.data
     }
@@ -31,7 +31,7 @@ export const updateOrderStatus = createAsyncThunk(
     'admin/updateOrderStatus',
     async(statusForm) => {
         console.log('form ', statusForm)
-        const result = await axios.put(`${import.meta.env.SERVER_URL}/api/admin/orders/update-status`,
+        const result = await axios.put(`${import.meta.env.VITE_SERVER_URL}/api/admin/orders/update-status`,
                 statusForm
         )
 

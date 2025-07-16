@@ -13,7 +13,7 @@ export const searchProducts = createAsyncThunk(
 
     async(searchQuery) => {
         const result = await axios.get(
-            `${import.meta.env.SERVER_URL}/api/shopping/products/search/${searchQuery}`
+            `${import.meta.env.VITE_SERVER_URL}/api/shopping/products/search/${searchQuery}`
 
         )
 

@@ -13,7 +13,7 @@ export const getFeatureImages = createAsyncThunk(
 
     async() => {
         const result = await axios.get(
-            `${import.meta.env.SERVER_URL}/api/common/feature/get`
+            `${import.meta.env.VITE_SERVER_URL}/api/common/feature/get`
 
         )
 
@@ -26,7 +26,7 @@ export const addFeatureImage = createAsyncThunk(
 
     async(image) => {
         const result = await axios.post(
-            `${import.meta.env.SERVER_URL}/api/common/feature/add`,
+            `${import.meta.env.VITE_SERVER_URL}/api/common/feature/add`,
             {image},
             // {
             //     headers:{
@@ -44,7 +44,7 @@ export const deleteFeatureImage = createAsyncThunk(
 
     async(imageId) => {
         const result = await axios.delete(
-            `${import.meta.env.SERVER_URL}/api/common/feature/${imageId}`
+            `${import.meta.env.VITE_SERVER_URL}/api/common/feature/${imageId}`
         )
 
         return result?.data

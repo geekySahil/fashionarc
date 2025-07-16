@@ -13,7 +13,7 @@ export const addReview = createAsyncThunk(
 
     async(formData) => {
         const result = await axios.post(
-            `${import.meta.env.SERVER_URL}/api/shopping/review/add`,
+            `${import.meta.env.VITE_SERVER_URL}/api/shopping/review/add`,
             formData,{
                 headers: {
                     'Content-Type': 'application/json'
@@ -32,7 +32,7 @@ export const getAllReviews = createAsyncThunk(
 
     async(productId) => {
         const result = await axios.get(
-            `${import.meta.env.SERVER_URL}/api/shopping/review/${productId}`,
+            `${import.meta.env.VITE_SERVER_URL}/api/shopping/review/${productId}`,
         )
 
         return result?.data

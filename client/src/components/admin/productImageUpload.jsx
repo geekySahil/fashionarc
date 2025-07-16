@@ -50,7 +50,7 @@ function ProductImageUpload({
             data.append('my_file', imageFile)
     
             const result = await axios.post(
-                `${import.meta.env.SERVER_URL}/api/admin/products/upload-image`,
+                `${import.meta.env.VITE_SERVER_URL}/api/admin/products/upload-image`,
                 data,
             )
     

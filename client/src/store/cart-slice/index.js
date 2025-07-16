@@ -13,7 +13,7 @@ export const addToCart = createAsyncThunk(
     'cart/addToCart',
     async({userId, productId, quantity}) => {
         const result = await axios.post(
-            `${import.meta.env.SERVER_URL}/api/shopping/cart/add`,
+            `${import.meta.env.VITE_SERVER_URL}/api/shopping/cart/add`,
             {
                 userId, 
                 productId, 
@@ -30,7 +30,7 @@ export const fetchAllCartItems = createAsyncThunk(
     'cart/fetchAllCartItems',
     async({userId}) => {
         const result = await axios.get(
-            `${import.meta.env.SERVER_URL}/api/shopping/cart/get/${userId}`,
+            `${import.meta.env.VITE_SERVER_URL}/api/shopping/cart/get/${userId}`,
         )
 
         return result?.data
@@ -42,7 +42,7 @@ export const updateCartItemsQty = createAsyncThunk(
     'cart/updateCartItemsQty',
     async({userId, productId, quantity}) => {
         const result = await axios.put(
-            `${import.meta.env.SERVER_URL}/api/shopping/cart/update`,
+            `${import.meta.env.VITE_SERVER_URL}/api/shopping/cart/update`,
             {
                 userId, 
                 productId, 
@@ -62,7 +62,7 @@ export const deleteCartItem = createAsyncThunk(
     'cart/deleteCartItem',
     async({userId, productId}) => {
         const result = await axios.delete(
-            `${import.meta.env.SERVER_URL}/api/shopping/cart/${userId}/${productId}`,
+            `${import.meta.env.VITE_SERVER_URL}/api/shopping/cart/${userId}/${productId}`,
         )
 
         return result?.data
