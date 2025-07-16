@@ -39,5 +39,5 @@ fashionarc is a modern, responsive clothing e-commerce web application where use
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/trendify-ecommerce.git
+git clone https://github.com/geekySahil/fashionarc
 cd trendify-ecommerce
