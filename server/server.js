@@ -25,7 +25,7 @@ const port = process.env.PORT || 4000
 
 
 app.use(cors({
-    origin: "http://localhost:5173",
+    origin: "https://fashionarc-sahils-projects-b6d8d58f.vercel.app",
     methods: ['GET', 'POST', 'DELETE', 'PUT'],
     allowedHeaders: [
         'Content-Type', 
