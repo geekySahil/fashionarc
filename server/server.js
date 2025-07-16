@@ -20,7 +20,9 @@ const port = process.env.PORT || 4000;
 const allowedOrigins = [
   "https://fashionarc.vercel.app",
   "https://fashionarc-sahils-projects-b6d8d58f.vercel.app", // optional, if still needed
+  "https://fashionarc-7ucq3xpb6-sahils-projects-b6d8d58f.vercel.app"
 ];
+
 
 app.use(
   cors({
