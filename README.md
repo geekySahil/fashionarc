@@ -1,4 +1,4 @@
-# 🛍️ Trendify – E-commerce Clothing Website
+# 🛍️ fashionarc – E-commerce Clothing Website
 
 fashionarc is a modern, responsive clothing e-commerce web application where users can explore, search, and shop stylish outfits for all occasions. Built with the MERN stack and tailored for performance and great user experience.
 
